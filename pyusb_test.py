@@ -30,7 +30,7 @@ for cfg in dev:
 dev.set_configuration()
 try:
     dev.set_interface_altsetting(interface = 4, alternate_setting = 0)
-except USBError:
+except usb.core.USBError:
     pass
 
 msg=[0xa5,0x5a,0xfc,0x02,0x30,0x00,0x16,0x00]
